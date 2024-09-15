@@ -16,7 +16,7 @@ class TicketController extends Controller
      */
     public function index()
     {
-        return $this->ok(Ticket::all());
+        return $this->ok('Tickets retrieved successfully', Ticket::all());
     }
 
     /**
