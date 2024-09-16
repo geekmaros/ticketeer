@@ -19,6 +19,12 @@ class AuthController extends Controller
        $request->validated($request->all());
 
 
+//        $request->validate([
+//            'email' => ['required', 'string', 'email'],
+//            'password' => ['required', 'string', 'min:8'],
+//        ]);
+
+
 
        if(! Auth::attempt($request->only('email', 'password'))){
            return $this->error('Invalid credentials', 401);
